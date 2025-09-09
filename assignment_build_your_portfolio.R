@@ -33,3 +33,10 @@ p <- ggplot(data_lionfish,
 p
 
 
+p <- ggplot(data_lionfish,
+            aes(x = total_length_mm, y = total_weight_gr,)) +
+  geom_point() +
+  facet_wrap(~site) +
+  labs(title = "Lionfish Total Weight by Total Length")
+p
+
