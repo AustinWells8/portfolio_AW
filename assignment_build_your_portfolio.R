@@ -24,3 +24,12 @@ p
 ggsave(plot = p, filename = "results/figures/first_plot.png")
 
 create.dir = TRUE
+
+p <- ggplot(data_lionfish,
+            aes(x = total_length_mm, y = total_weight_gr)) +
+  geom_point() +
+  facet_wrap(~site) +
+  labs(title = "Total Weight by Total Length")
+p
+
+
